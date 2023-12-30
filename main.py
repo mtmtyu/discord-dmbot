@@ -15,17 +15,17 @@ async def on_message(message):
       await message.add_reaction(emoji)
       # メッセージを投稿したユーザーにロールを追加
       user = message.author
-      add_role_id = 1169189492511481896
+      add_role_id = 追加したいロールID
       add_role = discord.utils.get(user.guild.roles, id=add_role_id)
       if add_role:
             await user.add_roles(add_role)
-      remove_role_id = 1169630629210632252
+      remove_role_id = 削除したいロールID
       remove_role = discord.utils.get(user.guild.roles, id=remove_role_id)
       if remove_role:
         await user.remove_roles(remove_role)
         
       # メッセージを投稿したユーザーにDMを送信
-      await message.author.send('もちもちサーバーにご参加ありがとうございます！自己紹介をしてくれたようですね！私からプレゼントがあります！サーバーに入った際に使ってみてください！それではサーバーでの生活をお楽しみください！　コマンド：/redeem WELCOME!MOCHISERVER')
+      await message.author.send('送信したいメッセージ')
 
 from keep_alive import keep_alive
 keep_alive()
