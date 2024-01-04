@@ -9,7 +9,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.channel.id == 1076190674770210843:
+    if message.channel.id == 対象チャンネルID:
       # 絵文字を追加
       emoji ="👍"
       await message.add_reaction(emoji)
