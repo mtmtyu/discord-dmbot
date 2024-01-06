@@ -1,4 +1,4 @@
-// Replitなどでプログラムを動かすう場合に必要なファイル
+# Replitなどでプログラムを動かすう場合に必要なファイル
 from flask import Flask
 from threading import Thread
 
