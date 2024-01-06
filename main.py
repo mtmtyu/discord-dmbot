@@ -3,6 +3,7 @@ import os
 
 client = discord.Client(intents=discord.Intents.default())
 
+# 起動した際に表示するデバッグメッセージ
 @client.event
 async def on_ready():
     print('ログインしました')
@@ -13,7 +14,7 @@ async def on_message(message):
       # 絵文字を追加
       emoji ="👍"
       await message.add_reaction(emoji)
-      # メッセージを投稿したユーザーにロールを追加
+      # メッセージを投稿したユーザーにロールを追加&削除
       user = message.author
       add_role_id = 追加したいロールID
       add_role = discord.utils.get(user.guild.roles, id=add_role_id)
