@@ -28,6 +28,7 @@ async def on_message(message):
       # メッセージを投稿したユーザーにDMを送信
       await message.author.send('送信したいメッセージ')
 
+# keep_aliveへのアクセス及び.envファイルからトークン取得
 from keep_alive import keep_alive
 keep_alive()
 TOKEN = os.getenv("DISCORD_TOKEN")
